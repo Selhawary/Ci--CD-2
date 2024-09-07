@@ -6,8 +6,6 @@ services:
     container_name: react-app
     ports:
       - "3000:3000"
-    stdin_open: true
-    tty: true
     depends_on:
       - backend
     networks:
@@ -27,7 +25,10 @@ services:
   database:
     image: mongo
     container_name: mongo-db
+    volumes:
+      - /home/sayed/me/mongo-backup:/data/db 
     ports:
+
       - "27017:27017"
     networks:
       - mern-networks
