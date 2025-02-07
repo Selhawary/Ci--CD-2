@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend-app
-          image: sayedkhaledelhawary/frontend
+          image: sayedkhaledelhawary/frontend-jenkins:latest
           imagePullPolicy: IfNotPresent
           envFrom:
             - configMapRef:
@@ -37,7 +37,7 @@ spec:
     spec:
       containers:
         - name: backend-app
-          image: sayedkhaledelhawary/backedend
+          image: sayedkhaledelhawary/backend-jenkins
           imagePullPolicy: IfNotPresent
           envFrom:
             - configMapRef:
